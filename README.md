@@ -14,7 +14,7 @@ Discord: (https://discord.gg/bEs6cn3225)
 
 # Dependencies
 
-* [QRCore](https://github.com/QRCore-RedM-Re)
+* [qr-core](https://github.com/QRCore-RedM-Re/qr-core)
 * [qr_menu](https://github.com/QRCore-RedM-Re/qr_menu)
 * [qr-appearance](https://github.com/QRCore-RedM-Re/qr-appearance)
 
