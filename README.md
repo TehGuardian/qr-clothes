@@ -3,6 +3,8 @@
 
 (https://cdn.discordapp.com/attachments/937686665659564054/1031567757919141898/Screenshot_22.png)
 
+
+![alt text](https://i.imgur.com/XwI6mJH.jpeg)
 Discord: (https://discord.gg/bEs6cn3225)
 
 # Credits
