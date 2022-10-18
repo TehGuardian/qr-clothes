@@ -6,7 +6,7 @@ Discord: (https://discord.gg/bEs6cn3225)
 
 # Credits
 
-* [Ktoś](https://github.com/Ktos93) Thank you for agree to use the script [rdr_creator]
+* [Ktoś](https://github.com/Ktos93) Thank you for agree to use the script [rdr_clothes_store]
 
 # converted
 
