@@ -1,7 +1,8 @@
 # qr-clothes
 
 
-![alt text](https://cdn.discordapp.com/attachments/937686665659564054/1031567757919141898/Screenshot_22.png)
+(https://cdn.discordapp.com/attachments/937686665659564054/1031567757919141898/Screenshot_22.png)
+
 Discord: (https://discord.gg/bEs6cn3225)
 
 # Credits
