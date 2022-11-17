@@ -541,3 +541,42 @@ exports('GetClothesCurrentComponentHash', function(name)
     end
     return hash
 end)
+
+local active2 = false
+local target2
+Citizen.CreateThread(function()
+    while true do
+        Wait(1)
+        local canwait = true
+        local playerPed = PlayerPedId()
+        local coords = GetEntityCoords(playerPed)
+        for k,v in pairs(Config.Cloakroom) do
+            local dist =  Vdist(coords, v)
+            if dist < 2 then
+                if dist  < 20 then
+                    canwait = false
+                end
+                if not active2 then
+                    active2 = true
+                    target2 = k
+                    local str = Citizen.InvokeNative(0xFA925AC00EB830B9, 10, "LITERAL_STRING", Config.Cloakroomtext, Citizen.ResultAsLong())
+                    Citizen.InvokeNative(0xFA233F8FE190514C, str)
+                    Citizen.InvokeNative(0xE9990552DEC71600)
+                end
+                if IsControlJustReleased(0, Config.OpenKey) or IsDisabledControlJustReleased(0, Config.OpenKey) then
+                    TriggerEvent('qr_clothes:OpenOutfits')
+                end
+            else
+                if active2 and k == target2 then
+                    local str = Citizen.InvokeNative(0xFA925AC00EB830B9, 10, "LITERAL_STRING", " ", Citizen.ResultAsLong())
+                    Citizen.InvokeNative(0xFA233F8FE190514C, str)
+                    Citizen.InvokeNative(0xE9990552DEC71600)
+                    active2 = false
+                end
+            end
+        end
+        if canwait then
+            Wait(1000)
+        end
+    end
+end)
