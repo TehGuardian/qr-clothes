@@ -3,12 +3,10 @@ Config.Shoptext = 'Press ~INPUT_JUMP~ to open a clothing store' -- Text to open 
 Config.Cloakroomtext = 'Press ~INPUT_JUMP~ to open the changing rooms' -- Text to open the clothing shop
 Config.BlipName = 'A clothing store' -- Blip Name Showed on map
 Config.BlipNameCloakRoom = 'Wardrobe' -- Blip Name Showed on map
-Config.EnableCommand = true -- Enable/Disable /clothing command
 Config.BlipSprite = 1195729388	 -- Clothing shop sprite
 Config.BlipSpriteCloakRoom = 1496995379	 -- Clothing shop sprite
 Config.BlipScale = 0.2 -- Blip scale
 Config.OpenKey = 0xD9D0E1C0 -- Opening key hash
-Config.Price = 5 -- Price for clothes
 Config.Zones = {
 	vector3(-325.5,774.57,117.45), -- VALENTINE
 	vector3(1326.42, -1289.56, 77.02), -- RHODES
@@ -27,7 +25,7 @@ Config.Cloakroom = {
 	vector3(2556.49,-1160.14,53.74) 
 }
 
-Config.Label= {
+Config.Label = {
 	["boot_accessories"] = "Boot Accessories",
     ["pants"] = "Pants",
     ["cloaks"] = "Cloaks",
