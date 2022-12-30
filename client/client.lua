@@ -181,8 +181,6 @@ function MenuUpdateClothes(data, menu)
 
 end
 function GetMaxTexturesForModel(category, model)
-    -- print(model)
-    -- print(category)
     if model == 0 then
         model = 1
     end
@@ -243,8 +241,7 @@ function ClothingLight()
     end)
 end
 
-RegisterNetEvent('qr_clothes:OpenClothingMenu')
-AddEventHandler('qr_clothes:OpenClothingMenu', function(ClothesComponents)
+RegisterNetEvent('qr_clothes:OpenClothingMenu', function(ClothesComponents)
     ClothesCache = ClothesComponents
     if IsPedMale(PlayerPedId()) then
         for k,v in pairs(clothes_list["male"]) do
@@ -305,9 +302,8 @@ function Change(id, category, change_type)
     end
 end
 
-RegisterNetEvent('qr_clothes:ApplyClothes')
-AddEventHandler('qr_clothes:ApplyClothes', function(ClothesComponents, Target)
-    Citizen.CreateThread(function()
+RegisterNetEvent('qr_clothes:ApplyClothes', function(ClothesComponents, Target)
+    CreateThread(function()
         local _Target = Target or PlayerPedId()
         local LoadingCheck = false
         if type(ClothesComponents) ~= "table" then
@@ -402,7 +398,7 @@ function camera(zoom, offset)
 
 end
 
-Citizen.CreateThread(function()
+CreateThread(function()
     for k, v in pairs(Config.Zones) do
         local blip = N_0x554d9d53f696d002(1664425300, v)
         SetBlipSprite(blip, Config.BlipSprite, 1)
@@ -417,13 +413,11 @@ Citizen.CreateThread(function()
     end
 end)
 
-RegisterNetEvent('qr_clothes:OpenOutfits')
-AddEventHandler('qr_clothes:OpenOutfits', function()
+RegisterNetEvent('qr_clothes:OpenOutfits', function()
     TriggerServerEvent('qr_clothes:getOutfits')
 end)
 
-RegisterNetEvent('qr_clothes:putInTable')
-AddEventHandler('qr_clothes:putInTable', function(outfit)
+RegisterNetEvent('qr_clothes:putInTable', function(outfit)
     Outfits_tab = {}
     for i, k in pairs(outfit) do
         table.insert(Outfits_tab, {
@@ -466,7 +460,7 @@ end
 
 local active = false
 local target
-Citizen.CreateThread(function()
+CreateThread(function()
     while true do
         Wait(1)
         local canwait = true
@@ -544,7 +538,7 @@ end)
 
 local active2 = false
 local target2
-Citizen.CreateThread(function()
+CreateThread(function()
     while true do
         Wait(1)
         local canwait = true

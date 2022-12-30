@@ -34,7 +34,7 @@ function pairsByKeys (t, f)
 end
 
             
--- Citizen.CreateThread(function()
+-- CreateThread(function()
 --     local s = LoadResourceFile(GetCurrentResourceName(), "Test.json") or ""
 --     if s ~= "" then
 --         local Test = json.decode(s)
@@ -101,7 +101,7 @@ function CalculatePrice()
 					end
 				end
 			end
-		
+
 		end
 		return price
 end
